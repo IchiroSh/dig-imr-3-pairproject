@@ -1,4 +1,4 @@
-console.log("Hello World");
+// console.log("Hello World");
 
 // Retrieve Elements
 const consoleLogList = document.querySelector('.editor__console-logs');
@@ -61,9 +61,12 @@ executeCodeBtn.addEventListener('click', () => {
     
     // Get input from the code editor
     const userCode = codeEditor.getValue();
-
+    
+    // const newFunction = new Function(userCode);
     // Run the user code
     try {
+        // localStorage.setItem('outputArgMessage', new Function(userCode)());
+        // newFunction();
         new Function(userCode)();
     } catch (err) {
         console.error(err);
@@ -82,3 +85,5 @@ resetCodeBtn.addEventListener('click', () => {
 })
 
 editorLib.init();
+// module.exports = main;
+

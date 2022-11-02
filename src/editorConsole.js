@@ -1,24 +1,26 @@
+
 let console = (function (oldConsole) {
     return {
         formatArgsOutput: function(arg) { 
             let outputArgMessage;
-
+            
             // Deal with different data types
             switch (this.getType(arg)) {
                 case "string":
                     outputArgMessage = `"${arg}"`;
                     break;
-                case "object":
-                    outputArgMessage = `Object ${JSON.stringify(arg)}`;
-                    break;
-                case "array":
-                    outputArgMessage = `Array ${JSON.stringify(arg)}`;
-                    break;
-                default:
-                    outputArgMessage = arg;
-                    break;
-            }
-
+                    case "object":
+                        outputArgMessage = `Object ${JSON.stringify(arg)}`;
+                        break;
+                        case "array":
+                            outputArgMessage = `Array ${JSON.stringify(arg)}`;
+                            break;
+                            default:
+                                outputArgMessage = arg;
+                                break;
+                            }
+                            
+            localStorage.setItem('outputArgMessage', outputArgMessage);
             return outputArgMessage;
         },
         getType: function (arg) {
