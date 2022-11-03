@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Javascript チャレンジ</h1>
+    <h1 style="text-align:center;">Javascript チャレンジ</h1>
+    <div id="question" style="text-align:center;">"Hello World!" と表示させてください</div>
+    <div id="reply" style="text-align:center;">Let's challenge!</div>
     <div class="editor">
         <div class="editor__wrapper">
             <div class="editor__body">
@@ -25,11 +27,15 @@
                 </div>
             </div>
         </div>
+        <div class="next__wrapper"></div>
+            <button class="next">NEXT ></button>
     </div>
+    
     <script src="../node_modules/ace-builds/src-min/ace.js"></script>
     <script src="../node_modules/ace-builds/src-min/mode-javascript.js"></script>
     <script src="../node_modules/ace-builds/src-min/ext-language_tools.js"></script>
     <script src="../src/main.js"></script>
+    <script src="../src/sub.js"></script>
     <script src="../src/editorConsole.js"></script>
     <script src="../test/test.js"></script>
 </body>

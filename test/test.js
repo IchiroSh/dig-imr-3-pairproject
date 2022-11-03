@@ -1,11 +1,8 @@
+const sub = require("../src/sub");
+const { expect } = require("chai");
 
-executeCodeBtn.addEventListener('click', () => {
-let answer = localStorage.outputArgMessage   
-console.log("answer" + answer);
-let test = JSON.stringify("Hello World!");
-if (answer === test){
-    console.log("OK!");
-}else{
-    console.log("Wrong!!");
-}
-});
+describe("sub", () => {
+    it("should have right page", () => {
+      expect(i).to.equal(1);
+    });
+})
